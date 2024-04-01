@@ -1,0 +1,816 @@
+
+*{margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+  :root{
+      --cor-primaria-botao-white: white; 
+      --cor-primaria-botao-green: green;
+      --cor-primaria-botao-red:   red;
+      --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+      --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+      ;
+  }
+  
+  
+  /* Estilos das abas */
+.tab {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 2px 2px 10px #888888;
+    background-color: #fff;
+  }
+  
+  /* Estilos do menu das abas */
+  .tab-menu {
+    display: flex;
+    width: 100%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tab-menu li {
+    margin: 0;
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #064A8C;
+    color: #fff;
+    font-family: 'Montserrat';
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .tab-menu li.active {
+    transition: all 0.5s ease-in-out;
+    background-color: #2980b9;
+  }
+  
+  .tab-menu .line{
+    position: absolute;
+    height: 5px;
+    width: 108px;
+    background: #F28920;
+    left: 0;
+    border-radius: 2px;
+    bottom: 0;
+    transition:  all 0.29s ease-in-out;
+  }
+  
+  
+  
+  .line.active{
+    left: 109px;
+  }
+  /* ------------------------------------- */
+  
+  /* Estilo da Caixa */
+  
+  .selecao-pergunta{
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 8px;
+  
+  }
+  
+  .caixa-pergunta{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    background-color: rgba(103, 162, 246, 0.157);
+  }
+  
+  th {
+    
+    height: 25px;
+    background-color: #064A8C;
+    color: rgb(255, 255, 255);
+    padding: 0 4vw 0;
+    font-family: 'Montserrat';
+  }
+  
+  td {
+      max-width: 100px;
+      border-bottom: 2px solid rgb(166, 166, 166);
+      font-family: 'Montserrat';
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      word-wrap: break-word;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+  }
+  
+  
+  
+  /* Estilizando CheckBox */
+  
+  
+  #checkbox{
+    appearance: none;
+    border: 2px solid #064A8C;
+    border-radius: 50px;
+    background-color: transparent;
+    padding: 4px;
+    cursor: pointer;
+    color: #064A8C;
+  }
+  
+  #checkbox::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 15px;
+    color: white;
+    display: block;
+  }
+  
+  #checkbox:hover{
+    background-color: rgb(236, 236, 236);
+    
+  }
+  
+  #checkbox:checked{
+    background-color: #064A8C;
+    
+  }
+  #checkbox:checked::after{
+    display: block;
+  }
+  
+  
+  /* estilo de rolagem */
+  
+  .primeira-caixa::-webkit-scrollbar{
+    width: 8px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+  }
+  
+  .primeira-caixa::-webkit-scrollbar-thumb{
+    background-color: #F28920;
+    border-radius: 10px; 
+  } 
+  .escondido{
+    display: none;
+  }
+  
+  /* Adicionar Pergunta */
+  .adicionar_pergunta{
+    display: flex;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-radius: 50px;
+      cursor: pointer;
+  }
+   #add_pergunta{
+    font-family: 'Montserrat';
+      text-decoration: none;
+      font-size: medium;
+      color: #064a8c;
+      padding-top: 3px;
+      width: 100%;
+      border-radius: 100px;
+      border: 2px solid #064a8c;
+  }
+  
+  
+  #add_pergunta:hover,#icon_add:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: #064A8C;
+    color: white;
+  }
+  
+  
+   
+  
+  /* Css Botão Voltar */
+
+.botao-padrao-voltar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-voltar-submit{
+    width: 180px;
+    height: 45px;
+    text-align: center;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-yellow);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-yellow);
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.botao-voltar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-yellow);
+    color: var(--cor-primaria-botao-white);
+}
+  
+  /* Css Botão Cadastrar */
+  
+  .botao-padrao-cadastrar{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .botao-cadastrar-submit{
+      width: 180px;
+      height: 45px;
+      background-color: var(--cor-primaria-botao-white);
+      border: 3px solid var(--cor-primaria-botao-green);
+      border-radius: 20px;
+      cursor: pointer;
+      color: var(--cor-primaria-botao-green);
+      font-style: normal;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      font-size: 15px;
+  }
+  
+  .botao-cadastrar-submit:hover{
+      transition: all 0.4s;
+      background-color: var(--cor-primaria-botao-green);
+      color: var(--cor-primaria-botao-white);
+  }
+  
+  /* Css input */
+
+
+.input_group.field{
+    width: 100%;
+    
+  }
+  
+  .input_group {
+      position: relative;
+      padding: 20px 0 0;
+      width: 100%;
+    }
+    
+    .input_field {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: 0;
+      color: black;
+      padding: 7px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      left: 10%;
+    }
+    
+    .input_field::placeholder {
+      color: transparent;
+    }
+    
+    .input_field:placeholder-shown ~ .input_label {
+      font-size: 17px;
+      cursor: text;
+      top: 37px;
+      left: 10px;
+    }
+    
+  
+    
+    .input_label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.3s;
+      color: #9b9b9b;
+      pointer-events: none;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      left: 10px;
+      
+    }
+  
+    
+    .input_field:focus {
+      padding-bottom: 6px;
+      font-weight: 700;
+      border-width: 3px;
+      border-image-slice: 1;
+      
+    }
+    
+    .input_field:focus ~ .input_label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.3s;
+      font-size: 17px;
+      font-weight: 700;
+      left: 10px;
+    }
+    
+    .input_field:required, .input_field:invalid {
+      box-shadow: none;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.pai_de_todos {
+    width: 100%;
+    height: 100%;
+    max-width: 832px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.todo-projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza na horizontal */
+    margin: 0px 50px;
+}
+
+#titulo-pergunta-pre,
+#titulo-pergunta-pos {
+    font-size: medium;
+    font-family: 'Montserrat';
+
+}
+
+#titulo {
+    font-family: 'Montserrat';
+
+}
+
+.titulo-selecione-pergunta-pre {
+    height: 30px;
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.titulo-selecione-pergunta-pos {
+    height: 30px;
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.titulo-topo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.selecao-pergunta {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-width: 800px;
+    max-height: 340px;
+}
+
+.selecao-pergunta::-webkit-scrollbar {
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    width: 8px;
+
+}
+
+.selecao-pergunta::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #F28920;
+}
+
+/* --------------INPUTS -------------- */
+.inputs-cadastro-checklist {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+}
+
+.cadastro-checklist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.input_group.field {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+/* --------------CAIXA DE PERGUNTAS-------------- */
+.selecao-perguntas {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------BOTÕES-------------- */
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botoes-cadastro-checklist {
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 832px;
+}
+
+/*-------------- Tabela de perguntas --------------*/
+
+
+.tabela-perguntas {
+    border-collapse: collapse;
+    border-radius: 15px;
+
+}
+
+.topo-tabela {
+    position: sticky;
+    top: 0px;
+
+}
+
+/* --------------@media-------------- */
+@media (max-width: 600px) {
+    th {
+        padding: 0 4vw 0;
+        font-size: smaller;
+
+    }
+    #checkbox::after {
+        font-size: 8px;
+    }
+    td{
+        font-size: small;
+    }
+
+}
+/* -----------------------------------------------------------------POP_UPS------------------------------------------------------------------------------------------------------- */
+:root{
+    --cor-primaria-botao-white: white; 
+    --cor-primaria-botao-green: green;
+    --cor-primaria-botao-red:   red;
+    --cor-primaria-botao-yellow:rgba(255, 199, 0, 1);
+    --cor-primaria-botao-blue:  rgba(6, 74, 140, 1);
+  }
+  .container-pop-up-notificacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 100%;
+    height: 100vh; */
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    
+  }
+  
+  .popup-notificacao{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    background-color: white;
+    box-shadow: 15px 5px 15px rgb(158, 157, 157);
+    visibility: hidden;
+    border: 1px solid rgba(219, 219, 219, 0.582);
+    border-radius: 15px;
+    transition: transform 0.4s, top 0.4s;
+    font-family: 'Montserrat';
+  }
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup-notificacao p{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+  
+  /* Css Botão OK */
+  
+  .botao-padrao-ok {
+    margin-top: 50px;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botao-ok-submit {
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 580;
+  }
+  
+  .botao-ok-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+  }
+  .div-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+   
+    .popup-notificacao {
+        width: 100%;
+        max-width: 320px;
+        
+    }
+    
+    .btn-pop-up-notificacao { 
+        font-size: 18px;
+        padding: 8px 30px;
+    }
+       
+    .popup-notificacao p {
+            
+        font-size: 20px;
+        margin: 20px 0;
+    }
+        
+    .botao-ok-submit { 
+        width: 100%; 
+        font-size: 14px; 
+        width: 150px;
+        height: 45px;
+        
+    }
+  
+  }
+  
+  @media (max-width: 227px) {
+    #img_check{
+        width: 200px;
+        
+    }
+    .botao-ok-submit{
+        width: 150px;
+        height: 40px;
+    }
+  }
+
+
+
+
+/* POPUP DE CADASTRAR PERGUNTAS */
+
+.popup_cadastrar{
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    gap: 1vh;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup1{
+    visibility: visible;
+    top: 55%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* TÍTULOS DO POPUP DE CADASTRAR PERGUNTAS */
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin-top: 2%; 
+} 
+
+/* RESPONSIVIDADE DO POPUP DE CADASTRAR PERGUNTAS */
+
+@media screen and (max-width: 700px ){
+
+    .popup_cadastrar.open-popup1{
+        width: 330px;
+        top: 55%;
+    }
+
+    .botao-confirmar-submit {
+        width: 115px;
+    }   
+
+    .botao-cancelar-submit{
+        width: 115px;
+    }
+
+    .botoes{
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+}
+
+
+
+/* CAIXA DE TEXTO */
+
+textarea{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    background-color: #f9f8f8;
+}
+
+.nova_pergunta{
+    width:100%;
+    height: 18.2vh;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* DIV DAS CHECKBOX'S DO POPUP DE CADASTRAR PERGUNTAS*/
+
+.checks{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#check1{
+    cursor: pointer;
+}
+
+#check2{
+    cursor: pointer;
+}
+
+.check1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.check2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* BOTÕES DO POPUP DE CADASTRAR PERGUNTAS (cancelar e confirmar) */
+
+.botoes{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 1%;
+}
+
+.botao-padrao-cancelar{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-cancelar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-red);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-red);
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 580;
+    font-size: 15px;
+    text-align: center;
+}
+
+.botao-cancelar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-red);
+    color: var(--cor-primaria-botao-white);
+}
+
+.botao-padrao-confirmar{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.botao-confirmar-submit{
+    width: 180px;
+    height: 45px;
+    background-color: var(--cor-primaria-botao-white);
+    border: 3px solid var(--cor-primaria-botao-green);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria-botao-green);
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 580;
+    font-size: 15px;
+    text-align: center;
+}
+
+.botao-confirmar-submit:hover{
+    transition: all 0.4s;
+    background-color: var(--cor-primaria-botao-green);
+    color: var(--cor-primaria-botao-white);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1059;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; 
+    transition: transform 0.4s, top 0.4s;
+}
+
+#popup-cadastro-pergunta{
+    position: absolute;
+    z-index: 999999;
+
+}
+  
+  
