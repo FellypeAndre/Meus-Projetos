@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main {
+public class Atv6 {
     public static void main(String[] args) {
         int l1[] = new int[21], i;
         int l2[] = new int[21];
@@ -27,3 +27,8 @@ public class Main {
         }
         
         sc.close();
+        
+        
+    }
+
+}
