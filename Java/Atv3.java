@@ -1,4 +1,4 @@
-import java.util.Scanner;
+4import java.util.Scanner;
 public class Atv3 {
     public static void main(String[] args){
         int n[] = new int[20], quantPositivos = 0, i;

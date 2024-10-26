@@ -1,16 +1,16 @@
 <?php 
 $url = 'https://raw.githubusercontent.com/wkanashiro/php2024/main/passagens.json';
 $conteudo = file_get_contents($url);
+
 $item = json_decode($conteudo, true);
 $sigla = '';
+// print_r($item);
 
 if (!empty($_POST['sigla'])) {
     $sigla = $_POST['sigla'];
 }
 
-// echo '<pre>';
-// echo print_r($item);
-// echo '</pre>';
+
 ?>
 
 <!DOCTYPE html>
