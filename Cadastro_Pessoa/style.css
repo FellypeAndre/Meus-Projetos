@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.esquerda{
+    display: flex;
+    justify-content: left ;
+    width: 40% ;
+    float: left;
+
+}
+.cadastro{
+    display: flex
+    
+}
+
+.cadastro {
+    margin: 20px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+
+}
+
+.cadastro label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.cadastro input[type="text"], .cadastro input[type="number"], .cadastro select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cx_btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#btn_cadatrar{
+    padding: 10px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    width: 50%;
+}
+
+#btn_cadatrar:hover {
+    color: white;
+    background-color: #005fa3;
+}
+
+.direita{
+    height: 500px;
+    width: 50%;
+    float: left;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+
+}
+
+#titulo td {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+a{
+    margin: 10px 50px;
+}
+
+td a {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 60px 6px;
+}
+
+
+td a[href*="id="] {
+    background-color: #8a0e0a; /* Cor para o botão Excluir */
+}
+
+td a[href*="id_up="] {
+    background-color: #0a32a0; /* Cor para o botão Editar */
+}
+
+td a:hover {
+    opacity: 0.8;
+}
+
+.avisos{
+    width: 80%;
+    height: 20px;
+    margin: 6px auto;
+}
+
+tr{
+    width: 100%;
+}
