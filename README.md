@@ -50,7 +50,7 @@ Este projeto é um **Sistema de Gerenciamento de Estoque** desenvolvido em **Lar
 ## Instalação e Configuração
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/FellypeAndre/Meus-Projetos/tree/main/Estoque
+   git clone https://github.com/FellypeAndre/PJ_WEB.git
    cd Estoque
    ```
 2. Instale as dependências:
