@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerar Relatório</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="logo_extensao.png" alt="Prefeitura de Ponta Porã" class="logo" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Mapa</a>
+      <a href="#">Reclamações</a>
+      <a href="#" class="ativo">Relatórios</a>
+      <a href="#">Sair</a>
+    </nav>
+  </header>
+
+  <main>
+    <form class="formulario" action="#" method="get">
+      <h1 class="titulo">Gerar Relatório de Reclamações</h1>
+
+      <!-- Data de emissão do relatório -->
+      <div class="campo">
+        <label for="data-emissao">
+          <span class="icone">📅</span> 
+          <input type="date" id="data-emissao" name="data-emissao" value="2025-05-01" />
+         </label>
+      </div>
+
+      <!-- Data final do filtro -->
+      <div class="campo">
+        <label for="data-final">
+          <span class="icone">📅</span> 
+          <input type="date" id="data-final" name="data-final" value="2025-05-31" />
+        </label>
+      </div>
+
+      <!-- Bairro -->
+      <div class="campo">
+        <label for="bairro">
+          <span class="rotulo">Bairro</span>
+          <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" />
+        </label>
+      </div>
+
+      <!-- Tipo de reclamação -->
+      <div class="campo">
+        <label for="tipo">
+          <span class="rotulo">Tipo</span>
+          <select id="tipo" name="tipo">
+            <option value="buraco">Buraco na rua</option>
+            <option value="lixo">Acúmulo de lixo</option>
+            <option value="iluminacao">Iluminação pública</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Status -->
+      <div class="campo">
+        <label for="status">
+          <span class="rotulo">Status</span>
+          <select id="status" name="status">
+            <option value="pendente">Pendente</option>
+            <option value="em_andamento" selected>Em andamento</option>
+            <option value="resolvido">Resolvido</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="botoes">
+        <button type="reset" class="btn-amarelo">Limpar</button>
+        <button type="submit" class="btn-verde">Gerar Relatório</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <img src="logo_extensao.png" alt="Prefeitura de Ponta Porã" class="logo-footer" />
+  </footer>
+</body>
+</html>
