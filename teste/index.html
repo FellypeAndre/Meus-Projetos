@@ -9,13 +9,20 @@
 </head>
 <body>
   <header>
-    <img src="logo_extensao.png" alt="Prefeitura de Ponta Porã" class="logo" />
+    <div class="menu_container">
+      <img src="logo_extensao.png" alt="Prefeitura de Ponta Porã" id="logo" />
+      <div class="div_sair">
+        <img src="logout.png" alt="Sair" id="IconSair" />
+        <h1 id="txt_sair">Sair</h1>
+
+      </div>
+      
+    </div>
     <nav>
       <a href="#">Home</a>
       <a href="#">Mapa</a>
       <a href="#">Reclamações</a>
       <a href="#" class="ativo">Relatórios</a>
-      <a href="#">Sair</a>
     </nav>
   </header>
 
@@ -26,7 +33,7 @@
       <!-- Data de emissão do relatório -->
       <div class="campo">
         <label for="data-emissao">
-          <span class="icone">📅</span> 
+          <span class="icone">início</span> 
           <input type="date" id="data-emissao" name="data-emissao" value="" />
          </label>
       </div>
@@ -34,7 +41,7 @@
       <!-- Data final do filtro -->
       <div class="campo">
         <label for="data-final">
-          <span class="icone">📅</span> 
+          <span class="icone">Final</span> 
           <input type="date" id="data-final" name="data-final" value="" />
         </label>
       </div>
