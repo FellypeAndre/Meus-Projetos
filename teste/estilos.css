@@ -86,7 +86,8 @@ span {
 input[type="date"] {
   border: none;
   font-size: 16px;
-  flex: 1;
+  width: 120px;
+  
 }
 input[type="text"] {
   border: none;
