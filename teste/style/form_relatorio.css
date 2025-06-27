@@ -12,7 +12,6 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   padding: 20px 2px;
@@ -22,11 +21,11 @@ header {
 .menu_container {
   display: flex;
   min-width: 60%;
-  max-width: 80%;
+  width: 90%;
  
   align-items: center;
   margin-bottom: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .sair{
   display: flex;
@@ -46,7 +45,7 @@ header {
 #IconSair{
   cursor: pointer;
 }
-#txt_sair{
+#txt_sair {
   color: #002f6c;
   cursor: pointer;
   height: 20px;
@@ -69,11 +68,6 @@ nav a {
   font-weight: 600;
 }
 
-a {
-  text-decoration: none;
-  color: #002f6c;
-  font-weight: 600;
-}
 
 nav a:hover {
   color: #007bff;
@@ -179,14 +173,17 @@ select {
 }
 
 .btn-verde {
+  
   background-color: #004d12;
   color: white;
   width: 30%;
+  font-size: 12px;
   border: none;
-  padding: 10px 25px;
-  font-weight: bold;
+  padding: 10px 30px;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 footer {
