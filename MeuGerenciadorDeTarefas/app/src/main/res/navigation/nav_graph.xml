@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.meugerenciadordetarefas.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home"
+        />
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="com.example.meugerenciadordetarefas.ui.CreateTaskFragment"
+        android:label="Criar Tarefa"
+        tools:layout="@layout/fragment_create_task" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.meugerenciadordetarefas.ui.CategoriesFragment"
+        android:label="Categorias"
+        tools:layout="@layout/fragment_categories" />
+</navigation>

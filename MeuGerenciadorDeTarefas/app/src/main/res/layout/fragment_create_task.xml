@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroun2"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título"
+        android:textColorHint="#FDFAFA" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_title"
+        android:layout_marginTop="8dp"
+        android:hint="Descrição"
+        android:textColorHighlight="#FBFBFB"
+        android:textColorHint="#FFFEFE"
+        android:textColorLink="#FBFAFA" />
+
+    <EditText
+        android:id="@+id/et_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_description"
+        android:layout_marginTop="8dp"
+        android:hint="Categoria"
+        android:textColor="#FAFAFA"
+        android:textColorHighlight="#FBFBFB"
+        android:textColorHint="#FFFEFE"
+        android:textColorLink="#FBFAFA" />
+
+    <Button
+        android:id="@+id/btn_save_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_category"
+        android:layout_marginTop="16dp"
+        android:text="Salvar Tarefa" />
+
+</RelativeLayout>
